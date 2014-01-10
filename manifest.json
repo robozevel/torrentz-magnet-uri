@@ -1,0 +1,26 @@
+{
+  "name": "Torrentz magnet URI",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Add magnet links to torrentz.eu results",
+  "homepage_url": "https://github.com/robozevel",
+  "permissions": [
+    "http://torrentz.eu/*"
+  ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "all_frames": true,
+      "matches": [
+        "http://torrentz.eu/*"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "src/main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources":[
+      "js/jquery/jquery.min.map"
+  ]
+}
